@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		222C5F9C22E2129F00B82F7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222C5F9B22E2129F00B82F7D /* AppDelegate.swift */; };
-		222C5F9E22E2129F00B82F7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222C5F9D22E2129F00B82F7D /* ViewController.swift */; };
+		222C5F9E22E2129F00B82F7D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222C5F9D22E2129F00B82F7D /* FirstViewController.swift */; };
 		222C5FA122E2129F00B82F7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222C5F9F22E2129F00B82F7D /* Main.storyboard */; };
 		222C5FA322E2129F00B82F7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222C5FA222E2129F00B82F7D /* Assets.xcassets */; };
 		222C5FA622E2129F00B82F7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222C5FA422E2129F00B82F7D /* LaunchScreen.storyboard */; };
 		222C5FB122E212A000B82F7D /* ReusableCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222C5FB022E212A000B82F7D /* ReusableCellTests.swift */; };
 		222C5FBC22E212A000B82F7D /* ReusableCellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222C5FBB22E212A000B82F7D /* ReusableCellUITests.swift */; };
+		222C5FCC22E4C15000B82F7D /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222C5FCB22E4C15000B82F7D /* ParentTableViewCell.swift */; };
+		222C5FCF22E4C70300B82F7D /* UserNamePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222C5FCE22E4C70300B82F7D /* UserNamePresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		222C5F9822E2129F00B82F7D /* ReusableCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReusableCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		222C5F9B22E2129F00B82F7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		222C5F9D22E2129F00B82F7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		222C5F9D22E2129F00B82F7D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		222C5FA022E2129F00B82F7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		222C5FA222E2129F00B82F7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		222C5FA522E2129F00B82F7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		222C5FB722E212A000B82F7D /* ReusableCellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReusableCellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		222C5FBB22E212A000B82F7D /* ReusableCellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCellUITests.swift; sourceTree = "<group>"; };
 		222C5FBD22E212A000B82F7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		222C5FCB22E4C15000B82F7D /* ParentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentTableViewCell.swift; sourceTree = "<group>"; };
+		222C5FCE22E4C70300B82F7D /* UserNamePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNamePresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +101,10 @@
 		222C5F9A22E2129F00B82F7D /* ReusableCell */ = {
 			isa = PBXGroup;
 			children = (
+				222C5FCD22E4C6C100B82F7D /* Protocols */,
+				222C5FCA22E4C0D900B82F7D /* View */,
+				222C5FC922E4C0C900B82F7D /* Controller */,
 				222C5F9B22E2129F00B82F7D /* AppDelegate.swift */,
-				222C5F9D22E2129F00B82F7D /* ViewController.swift */,
 				222C5F9F22E2129F00B82F7D /* Main.storyboard */,
 				222C5FA222E2129F00B82F7D /* Assets.xcassets */,
 				222C5FA422E2129F00B82F7D /* LaunchScreen.storyboard */,
@@ -123,6 +129,30 @@
 				222C5FBD22E212A000B82F7D /* Info.plist */,
 			);
 			path = ReusableCellUITests;
+			sourceTree = "<group>";
+		};
+		222C5FC922E4C0C900B82F7D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				222C5F9D22E2129F00B82F7D /* FirstViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		222C5FCA22E4C0D900B82F7D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				222C5FCB22E4C15000B82F7D /* ParentTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		222C5FCD22E4C6C100B82F7D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				222C5FCE22E4C70300B82F7D /* UserNamePresentable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +286,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				222C5F9E22E2129F00B82F7D /* ViewController.swift in Sources */,
+				222C5F9E22E2129F00B82F7D /* FirstViewController.swift in Sources */,
+				222C5FCF22E4C70300B82F7D /* UserNamePresentable.swift in Sources */,
 				222C5F9C22E2129F00B82F7D /* AppDelegate.swift in Sources */,
+				222C5FCC22E4C15000B82F7D /* ParentTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
