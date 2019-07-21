@@ -1,27 +1,18 @@
-import UIKit
 import Foundation
+import UIKit
 
-class FirstViewController: UIViewController  {
+class SecondViewController: UIViewController {
     
-    let userName = ["Papich", "Rapan", "Andromeda", "Witcher"]
+    let userName = ["Second", "View", "Controller"]
     let cellIdentifier = "cell"
     
     lazy var tableView: UITableView = {
         let table = UITableView()
-        table.register(ParentTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        table.register(SecondTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         table.delegate = self
         table.dataSource = self
         table.translatesAutoresizingMaskIntoConstraints = false
         return table
-    }()
-    
-    lazy var nextVCButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .green
-        button.setTitle("Next", for: .normal)
-        button.addTarget(self, action: #selector(nextVC), for: .touchUpInside)
-        return button
     }()
     
     @objc func nextVC() {
@@ -35,13 +26,6 @@ class FirstViewController: UIViewController  {
         tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         tableView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 50).isActive = true
         tableView.heightAnchor.constraint(equalToConstant: 200).isActive = true
-        
-        self.view.addSubview(nextVCButton)
-        
-        nextVCButton.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 50).isActive = true
-        nextVCButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        nextVCButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        nextVCButton.widthAnchor.constraint(equalToConstant: 150).isActive = true
     }
     
     override func viewDidLoad() {
@@ -49,15 +33,16 @@ class FirstViewController: UIViewController  {
         addSubviews()
         self.view.backgroundColor = .white
     }
+    
 }
 
-extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
+extension SecondViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return userName.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ParentTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! SecondTableViewCell
         cell.setupLabel(with: userName[indexPath.row])
         cell.setupUser(image: #imageLiteral(resourceName: "kek"))
         return cell

@@ -15,7 +15,9 @@
 		222C5FB122E212A000B82F7D /* ReusableCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222C5FB022E212A000B82F7D /* ReusableCellTests.swift */; };
 		222C5FBC22E212A000B82F7D /* ReusableCellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222C5FBB22E212A000B82F7D /* ReusableCellUITests.swift */; };
 		222C5FCC22E4C15000B82F7D /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222C5FCB22E4C15000B82F7D /* ParentTableViewCell.swift */; };
-		222C5FCF22E4C70300B82F7D /* UserNamePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222C5FCE22E4C70300B82F7D /* UserNamePresentable.swift */; };
+		222C5FCF22E4C70300B82F7D /* CellPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222C5FCE22E4C70300B82F7D /* CellPresentable.swift */; };
+		222C5FD622E4DAA900B82F7D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222C5FD522E4DAA900B82F7D /* SecondViewController.swift */; };
+		222C5FD822E4E1E200B82F7D /* SecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222C5FD722E4E1E200B82F7D /* SecondTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +52,9 @@
 		222C5FBB22E212A000B82F7D /* ReusableCellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCellUITests.swift; sourceTree = "<group>"; };
 		222C5FBD22E212A000B82F7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		222C5FCB22E4C15000B82F7D /* ParentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentTableViewCell.swift; sourceTree = "<group>"; };
-		222C5FCE22E4C70300B82F7D /* UserNamePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNamePresentable.swift; sourceTree = "<group>"; };
+		222C5FCE22E4C70300B82F7D /* CellPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPresentable.swift; sourceTree = "<group>"; };
+		222C5FD522E4DAA900B82F7D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		222C5FD722E4E1E200B82F7D /* SecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				222C5F9D22E2129F00B82F7D /* FirstViewController.swift */,
+				222C5FD522E4DAA900B82F7D /* SecondViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				222C5FCB22E4C15000B82F7D /* ParentTableViewCell.swift */,
+				222C5FD722E4E1E200B82F7D /* SecondTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -150,7 +156,7 @@
 		222C5FCD22E4C6C100B82F7D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				222C5FCE22E4C70300B82F7D /* UserNamePresentable.swift */,
+				222C5FCE22E4C70300B82F7D /* CellPresentable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -287,9 +293,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				222C5F9E22E2129F00B82F7D /* FirstViewController.swift in Sources */,
-				222C5FCF22E4C70300B82F7D /* UserNamePresentable.swift in Sources */,
+				222C5FCF22E4C70300B82F7D /* CellPresentable.swift in Sources */,
 				222C5F9C22E2129F00B82F7D /* AppDelegate.swift in Sources */,
+				222C5FD622E4DAA900B82F7D /* SecondViewController.swift in Sources */,
 				222C5FCC22E4C15000B82F7D /* ParentTableViewCell.swift in Sources */,
+				222C5FD822E4E1E200B82F7D /* SecondTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
